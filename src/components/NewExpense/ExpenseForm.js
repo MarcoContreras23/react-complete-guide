@@ -48,10 +48,12 @@ const ExpenseForm = () => {
             date: new Date(userInput.enteredDate),
         }
 
-        console.log(expenseData);
-        setUserInput.enteredTitle = ' ';
-        setUserInput.enteredAmount = ' ';
-        setUserInput.enteredDate = ' ';
+        console.log("Antes de borrar", userInput);
+        setUserInput(userInput.enteredTitle = ' ');
+        setUserInput(userInput.enteredAmount = ' ');
+        setUserInput(userInput.enteredDate = ' ');
+
+        console.log("Despues de de borrar", userInput);
     }
 
     return (
